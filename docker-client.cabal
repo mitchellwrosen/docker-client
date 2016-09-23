@@ -1,0 +1,78 @@
+-- This file has been generated from package.yaml by hpack version 0.14.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           docker-client
+version:        0.1.0.0
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+flag v124
+  description: Use Docker Remote API v1.24
+  manual: False
+  default: True
+
+library
+  default-extensions: DataKinds DeriveGeneric GeneralizedNewtypeDeriving LambdaCase OverloadedLabels OverloadedStrings TypeOperators
+  ghc-options: -Wall
+  build-depends:
+      aeson
+    , base
+    , data-default
+    , http-api-data
+    , http-client
+    , labels
+    , network
+    , safe-exceptions
+    , servant
+    , servant-client >= 0.9
+    , text
+    , time
+    , unordered-containers
+  if flag(v124)
+    hs-source-dirs:
+        src/v1.24
+  exposed-modules:
+      Docker.Client
+      Docker.Client.Types
+  other-modules:
+      Paths_docker_client
+  default-language: Haskell2010
+
+test-suite doctest
+  type: exitcode-stdio-1.0
+  main-is: DocTest.hs
+  hs-source-dirs:
+      test
+  default-extensions: DataKinds DeriveGeneric GeneralizedNewtypeDeriving LambdaCase OverloadedLabels OverloadedStrings TypeOperators
+  ghc-options: -Wall
+  build-depends:
+      aeson
+    , base
+    , docker-client
+    , doctest
+  other-modules:
+      Docker.Client.TypesSpec
+      Spec
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  default-extensions: DataKinds DeriveGeneric GeneralizedNewtypeDeriving LambdaCase OverloadedLabels OverloadedStrings TypeOperators
+  ghc-options: -Wall
+  build-depends:
+      aeson
+    , base
+    , bytestring
+    , docker-client
+    , file-embed
+    , hspec
+    , text
+  other-modules:
+      Docker.Client.TypesSpec
+      DocTest
+  default-language: Haskell2010

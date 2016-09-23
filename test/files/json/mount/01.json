@@ -1,0 +1,9 @@
+{
+  "Name": "fac362...80535",
+  "Source": "/data",
+  "Destination": "/data",
+  "Driver": "local",
+  "Mode": "ro,Z",
+  "RW": false,
+  "Propagation": ""
+}

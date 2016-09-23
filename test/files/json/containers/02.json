@@ -1,0 +1,38 @@
+{
+  "Id": "9cd87474be90",
+  "Names": [
+    "/coolName"
+  ],
+  "Image": "ubuntu:latest",
+  "ImageID": "d74508fb6632491cea586a1fd7d748dfc5274cd6fdfedee309ecdcbc2bf5cb82",
+  "Command": "echo 222222",
+  "Created": 1367854155,
+  "State": "Exited",
+  "Status": "Exit 0",
+  "Ports": [],
+  "Labels": {},
+  "SizeRw": 12288,
+  "SizeRootFs": 0,
+  "HostConfig": {
+    "NetworkMode": "default"
+  },
+  "NetworkSettings": {
+    "Networks": {
+      "bridge": {
+        "IPAMConfig": null,
+        "Links": null,
+        "Aliases": null,
+        "NetworkID": "7ea29fc1412292a2d7bba362f9253545fecdfa8ce9a6e37dd10ba8bee7129812",
+        "EndpointID": "88eaed7b37b38c2a3f0c4bc796494fdf51b270c2d22656412a2ca5d559a64d7a",
+        "Gateway": "172.17.0.1",
+        "IPAddress": "172.17.0.8",
+        "IPPrefixLen": 16,
+        "IPv6Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "MacAddress": "02:42:ac:11:00:08"
+      }
+    }
+  },
+  "Mounts": []
+}

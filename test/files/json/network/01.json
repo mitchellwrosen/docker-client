@@ -1,0 +1,14 @@
+{
+  "IPAMConfig": null,
+  "Links": null,
+  "Aliases": null,
+  "NetworkID": "7ea29fc1412292a2d7bba362f9253545fecdfa8ce9a6e37dd10ba8bee7129812",
+  "EndpointID": "2cdc4edb1ded3631c81f57966563e5c8525b81121bb3706a9a9a3ae102711f3f",
+  "Gateway": "172.17.0.1",
+  "IPAddress": "172.17.0.2",
+  "IPPrefixLen": 16,
+  "IPv6Gateway": "",
+  "GlobalIPv6Address": "",
+  "GlobalIPv6PrefixLen": 0,
+  "MacAddress": "02:42:ac:11:00:02"
+}

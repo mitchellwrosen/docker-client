@@ -1,0 +1,5 @@
+{
+  "PrivatePort": 2222,
+  "PublicPort": 3333,
+  "Type": "tcp"
+}

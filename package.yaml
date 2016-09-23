@@ -1,0 +1,61 @@
+name: docker-client
+version: 0.1.0.0
+
+ghc-options: -Wall
+
+flags:
+  v124:
+    description: Use Docker Remote API v1.24
+    default: true
+    manual: false
+
+default-extensions:
+  - DataKinds
+  - DeriveGeneric
+  - GeneralizedNewtypeDeriving
+  - LambdaCase
+  - OverloadedLabels
+  - OverloadedStrings
+  - TypeOperators
+
+dependencies:
+  - aeson
+  - base
+
+library:
+  when:
+    - condition: flag(v124)
+      source-dirs: src/v1.24
+  exposed-modules:
+    - Docker.Client
+    - Docker.Client.Types
+  dependencies:
+    - data-default
+    - http-api-data
+    - http-client
+    - labels
+    - network
+    - safe-exceptions
+    - servant
+    - servant-client >= 0.9
+    - text
+    - time
+    - unordered-containers
+
+tests:
+  doctest:
+    main: DocTest.hs
+    source-dirs: test
+    dependencies:
+      - docker-client
+      - doctest
+
+  spec:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - bytestring
+      - docker-client
+      - file-embed
+      - hspec
+      - text
